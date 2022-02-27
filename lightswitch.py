@@ -6,10 +6,16 @@ button.pack(pady = 20, padx = 20)
 
 # schijf hier tussen je code
 
-def lightSwitch():
-    print(":O")
+switch = False
 
-button.config(text="lightswitch off", command=lightSwitch)
+def toggleSwitch():
+    global button
+    if switch:
+        button.config(text="lightswitch off")
+    else:
+        button.config(text="lightswitch on")
+
+button.config(text="lightswitch off", command=toggleSwitch)
 
 
 # schijf hier tussen je code
