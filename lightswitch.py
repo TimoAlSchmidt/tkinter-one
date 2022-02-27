@@ -6,16 +6,25 @@ button.pack(pady = 20, padx = 20)
 
 # schijf hier tussen je code
 
-switch = False
+switch = True
+window.config(bg="black")
 
 def toggleSwitch():
     global button
+    global window
+    global switch
     if switch:
-        button.config(text="lightswitch off")
+        print("light is on")
+        window.config(bg="yellow")
+        button.config(text="Switch light off")
+        switch = False
     else:
-        button.config(text="lightswitch on")
+        print("light is off")
+        window.config(bg="black")
+        button.config(text="Switch light on")
+        switch = True
 
-button.config(text="lightswitch off", command=toggleSwitch)
+button.config(text="Switch light on", command=toggleSwitch)
 
 
 # schijf hier tussen je code
